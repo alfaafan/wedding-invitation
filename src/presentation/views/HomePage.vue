@@ -12,7 +12,7 @@ const guestName = computed(() => route.query.guest?.toString().trim() || "Guest"
 </script>
 
 <template>
-  <div class="min-h-screen d-flex flex-col justify-center content-center">
+  <div class="h-svh d-flex flex-col justify-center content-center px-8">
     <div class="pacifico-regular mb-5">
       <h6 class="text-lg">The Wedding of</h6>
       <h1 class="text-5xl my-3 mb-5">{{ weddingDetails.coupleNamesShort }}</h1>
@@ -23,6 +23,6 @@ const guestName = computed(() => route.query.guest?.toString().trim() || "Guest"
       <h3 class="text-black text-xl font-bold poppins-bold my-2">{{ guestName }}</h3>
       <p class="text-black text-xs">*) Mohon maaf apabila ada kesalahan penulisan nama/gelar</p>
     </div>
-    <button @click="$emit('scroll-to-target')" class="btn btn-primary mt-5 bg-white/30 backdrop-blur-sm shadow-lg text-black text-sm">Buka Undangan</button>
+    <button @click="$emit('scroll-to-target')" class="btn btn-primary mt-5 bg-white/30 backdrop-blur-sm shadow-lg text-gray-300 text-sm">Buka Undangan</button>
   </div>
 </template>

@@ -18,7 +18,7 @@ const genderGreet = computed(() => {
 
 <template>
   <div class="poppins-medium">
-    <h1 class="pacifico-regular mb-5 leading-relaxed">{{ props.name }}</h1>
+    <h1 class="pacifico-regular mb-5 leading-relaxed text-4xl">{{ props.name }}</h1>
     <p class="font-light text-sm">{{ genderGreet }} dari Bapak {{ props.fatherName }} dan Ibu {{ props.motherName }}</p>
   </div>
 </template>
