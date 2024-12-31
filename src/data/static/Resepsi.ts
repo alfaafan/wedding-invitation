@@ -6,7 +6,8 @@ export const resepsi: Event = {
     day: "Minggu",
     date: "11 Oktober 2025",
   },
-  time: "11:00 WIB",
-  location: "Gedung Wanita Sasana Krida Kusuma Surakarta",
-  mapsLink: "https://maps.app.goo.gl/qhSWETBzi2F7DbdbA",
+  time: "09:00 WIB",
+  location: "Gedung PMS (Perkumpulan Masyarakat Surakarta)",
+  address: "Jl. Ir. Juanda No.47, Purwodiningratan, Kec. Jebres, Kota Surakarta, Jawa Tengah 57128",
+  mapsLink: "https://maps.app.goo.gl/wUt4mF1gguLt2AQp6",
 };

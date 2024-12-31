@@ -3,6 +3,7 @@ export interface Event {
   eventDate: EventDate;
   time: string;
   location: string;
+  address: string;
   mapsLink: string;
 }
 

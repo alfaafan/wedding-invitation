@@ -29,7 +29,11 @@ const toggleAudio = () => {
 
 function scrollToTarget() {
   isScrollLocked.value = false;
-  document.body.style.overflow = "auto"; // Unlock scroll
+  // make the hidden class of the details div to visible
+  const details = document.getElementById("details");
+  if (!isScrollLocked.value && details) {
+    details.classList.remove("hidden");
+  }
   const targetElement = document.getElementById("info");
   if (targetElement) {
     targetElement.scrollIntoView({ behavior: "smooth" });
@@ -46,17 +50,21 @@ function scrollToTarget() {
 </script>
 
 <template>
-  <audio ref="bgAudio" :src="audioSrc" preload="auto" loop></audio>
-  <button @click="toggleAudio" class="fixed top-4 right-4 bg-transparent text-black rounded-full shadow-md p-3">
-    <span v-if="isPlaying">⏸</span>
-    <span v-else>▶️</span>
-  </button>
-  <HomePage @scroll-to-target="scrollToTarget" class="hidden" />
-  <InfoPage id="info" />
-  <LoveStoryPage />
-  <DetailAcaraPage />
-  <UcapanPage />
-  <Footer />
+  <div class="min-h-svh d-flex flex-col content-center" id="home">
+    <!-- <audio ref="bgAudio" :src="audioSrc" preload="auto" loop></audio> -->
+    <button @click="toggleAudio" class="fixed top-4 right-4 bg-transparent text-black rounded-full shadow-md p-3">
+      <span v-if="isPlaying">⏸</span>
+      <span v-else>▶️</span>
+    </button>
+    <HomePage @scroll-to-target="scrollToTarget" />
+    <div class="hidden" id="details">
+      <InfoPage id="info" />
+      <LoveStoryPage />
+      <DetailAcaraPage />
+      <UcapanPage />
+    </div>
+    <Footer />
+  </div>
 </template>
 
 <style scoped>

@@ -12,7 +12,7 @@ const guestName = computed(() => route.query.guest?.toString().trim() || "Guest"
 </script>
 
 <template>
-  <div class="h-svh d-flex flex-col justify-center content-center px-8">
+  <div class="d-flex flex-col justify-center content-center px-8 py-48">
     <div class="pacifico-regular mb-5">
       <h6 class="text-lg">The Wedding of</h6>
       <h1 class="text-5xl my-3 mb-5">{{ weddingDetails.coupleNamesShort }}</h1>
